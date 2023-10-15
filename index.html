@@ -1,121 +1,122 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lyvlens Landing Page</title>
-    <link rel="stylesheet" href="./style.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lyvlens Landing Page</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
+
 <body>
-    <main>
-        <div class="container">
-            <div class="row">
-                <nav class="navbar">
-                    <img class="img-logo" src="./Assets/Logo.png" alt="lyvlens">
-                    <ul>
-                        <div>
-                            <a href="twitter"> Twitter</a>
-                            <img class="icon" src="./Assets/arrow icon.svg" alt=" icon">
-                        </div>
-                        <div>
-                            <a href="instagram"> Instagram</a>
-                            <img class="icon" src="./Assets/arrow icon.svg" alt=" icon">
-                        </div>
-                        <div>
-                            <a href="linkedin"> linkedin</a>
-                            <img class="icon" src="./Assets/arrow icon.svg" alt=" icon">
-                            
-                        </div>
-                    </ul>
-                </nav>
-
-                <div class="content">
-                    <div class="hero">
-                        <h1> Introducing Lyvlens</h1>
-                        <h1>Your tech help companion</h1>
-                        <p>Blend AI and Human Support: Join Lyvlens to connect with experts, share knowledge, and conquer tech challenges through the power of community and collaboration</p>
-                        <input type="email" placeholder="Your email id here" />
-                        <a href="Join waitlist">Join waitlist</a>
-                    </div>
-                </div>
-
-            </div>
-
+  <!-- header -->
+  <header class="top-bar">
+    <img src="assets/logo.svg" alt="lyvlens logo" class="logo" />
+    <!-- <nav class="navbar">
+      <img class="img-logo" src="assets/Logo.png" alt="lyvlens">
+      <ul>
+        <div>
+          <a href="twitter"> Twitter</a>
+          <img class="icon" src="assets/arrow icon.svg" alt=" icon">
         </div>
-    </main>
-
-    <div>
-        <div class="body 1">
-            <content class="ask-help-info">
-                <h2>Seek Tech Help with Ease</h2>
-                <p>Seeking help has never been easier. With Lyvlens, you can effortlessly connect with experts who are ready to provide real-time support for your challenges. </p>
-                <p>Whether you have questions, need troubleshooting, or simply want expert guidance, Lyvlens streamlines the process, making help accessible at your fingertips.</p>
-                <p>Our platform ensures quick and convenient connections with tech-savvy professionals who can help you navigate any digital hurdle.</p>
-                <img src="/Assets/seek help image.png" alt="seek-help-image">
-            </content>
-
+        <div>
+          <a href="instagram"> Instagram</a>
+          <img class="icon" src="assets/arrow icon.svg" alt=" icon">
         </div>
-
-        <div class="body 2">
-            <content class="blend-info">
-                <h2>Blend of Ai and Human Support</h2>
-                <p>Seeking help has never been easier. With Lyvlens, you can effortlessly connect with experts who are ready to provide real-time support for your challenges. </p>
-                <p>Whether you have questions, need troubleshooting, or simply want expert guidance, Lyvlens streamlines the process, making help accessible at your fingertips.</p>
-                <p>Our platform ensures quick and convenient connections with tech-savvy professionals who can help you navigate any digital hurdle.</p>
-                <img src="/Assets/ai-human image.png" alt="blend">
-            </content>
-
-
+        <div>
+          <a href="linkedin"> linkedin</a>
+          <img class="icon" src="assets/arrow icon.svg" alt=" icon">
         </div>
+      </ul>
+    </nav> -->
+    <button class="btn btn-secondary">JOIN WAITLIST</button>
+  </header>
 
+  <main>
+    <section class="hero-section">
+      <h1 class="title">Introducing Lyvlens</h1>
+      <h1 class="subtitle">Your tech help companion</h1>
+      <p class="intro">Blend AI and Human Support: Join Lyvlens to connect with experts, share knowledge, and
+        conquer tech challenges through the power of community and collaboration</p>
+      <form class="waitlist-form">
+        <input type="email" required placeholder="Enter your email address" aria-label="waitlist email input" />
+        <button type="submit" class="btn btn-primary">Join waitlist</button>
+      </form>
+    </section>
+
+    <section class="feature-section">
+      <h2 class="title">Seek Tech Help with Ease</h2>
+      <div class="content">
+        <p>
+          Lyvlens revolutionizes help-seeking by offering seamless access to tech experts.
+        </p>
+        <p>
+          Our platform enables instant connections, ensuring swift solutions to digital challenges. Whether you need
+          troubleshooting, guidance or answers, Lyvlens makes it effortless to connect with experts and simplifying the
+          process.
+        </p>
+        <img src="assets/tech-help.png" alt="seek help picture">
+      </div>
+    </section>
+
+    <section class="feature-section">
+      <h2 class="title">Blend of AI and Human Support</h2>
+      <div class="content">
+        <p>
+          Experience a unique support blend at our platform, merging AI and human expertise for real-time assistance.
+          Connect with experts and leverage AI for swift solutions.
+        </p>
+        <p>
+          Join our community to foster collaboration through knowledge exchange and instant assistance.
+        </p>
+        <img src="assets/ai-human.png" alt="seek help picture">
+      </div>
+    </section>
+  </main>
+
+
+
+
+
+
+  <div class="waitlist-card">
+    <h2>Your tech help companion</h2>
+    <p>
+      Connect with experts, share knowledge, and conquer tech challenges together.
+    </p>
+    <form>
+      <input type="email" required placeholder="Enter your email address" aria-label="waitlist email input" />
+      <button type="submit" class="btn btn-primary">Join waitlist</button>
+    </form>
+  </div>
+
+  <footer>
+    <div class="row">
+      <img src="assets/logo-white.svg" alt="lyvlens logo" class="footer-logo">
+      <div class="socials-box">
+        <a href="https://x.com" target="_blank">
+          X (formerly Twitter)
+          <img class="social-icon" src="assets/arrow.svg" alt="arrow icon">
+        </a>
+        <a href="https://instagram.com" target="_blank">
+          Instagram
+          <img class="social-icon" src="assets/arrow.svg" alt="arrow icon">
+        </a>
+        <a href="https://www.linkedin.com/company/lyvlens/about" target="_blank">
+          LinkedIn
+          <img class="social-icon" src="assets/arrow.svg" alt="arrow icon">
+        </a>
+      </div>
     </div>
-
-    <card>
-        <div class="buttom card">
-            <h2> Your tech help companion</h2>
-            <p>Connect with experts, share knowledge, and conquer tech challenges together.<p>
-            <input type="email" placeholder="Your email id here" />
-            <a href="Join waitlist">Join waitlist</a>
-
-        </div>
-    </card>
-
-    <footer>
-        <div class="footer container">
-            <div class="footer row">
-                <nav class="footer navbar">
-                    <img class="img-logo" src="./Assets/Logo.png" alt="lyvlens">
-                    <ul>
-                        <div>
-                            <a href="twitter"> Twitter</a>
-                            <img class="icon" src="./Assets/arrow icon.svg" alt=" icon">
-                        </div>
-                        <div>
-                            <a href="instagram"> Instagram</a>
-                            <img class="icon" src="./Assets/arrow icon.svg" alt=" icon">
-                        </div>
-                        <div>
-                            <a href="linkedin"> linkedin</a>
-                            <img class="icon" src="./Assets/arrow icon.svg" alt=" icon">
-                            
-                        </div>
-                    </ul>
-                </nav>
-            </div>
-        </div>
-         
-        <div class="link">
-            <ul>
-                <a href="terms"> Terms</a>
-                <a href="privacy"> Privacy</a>
-                <a href="cookies"> Cookies</a>
-            </ul>
-            <p> © 2023lyvlens - Help Companion</p>
-
-        </div>
-    </footer>
-
-
-    
+    <div class="row links-row">
+      <a href="#">Terms</a>
+      <a href="#">Privacy</a>
+      <a href="#">Cookies</a>
+    </div>
+    <div class="row">
+      <p>2023 Lyvlens &copy; - 3D assistance</p>
+    </div>
+  </footer>
 </body>
+
 </html>
