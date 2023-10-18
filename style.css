@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Barlow:wght@300;400;700&family=Oswald:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Barlow:wght@300;400;500;600;700&family=Oswald:wght@400;700&display=swap");
 
 * {
   box-sizing: border-box;
@@ -36,6 +36,7 @@ img {
   font-size: 1rem;
   font-weight: bold;
   cursor: pointer;
+  border-radius: 8px;
 }
 
 .btn-primary {
@@ -78,9 +79,13 @@ body {
   display: none;
   text-transform: uppercase;
   margin-right: 1rem;
-  font-family: "Oswald" sans-serif;
+  font-family: "Oswald";
   text-wrap: nowrap;
   gap: 1rem;
+}
+
+.top-bar button {
+  font-family: "Oswald";
 }
 
 .top-bar nav a {
@@ -106,12 +111,14 @@ body {
 
 .hero-section .title {
   font-size: 2rem;
-  margin-bottom: 1rem;
+  margin-bottom: 0rem;
   text-align: center;
+  font-weight: 600;
 }
 
 .hero-section .subtitle {
   font-size: 2rem;
+  font-weight: 600;
   margin-top: 0rem;
   margin-bottom: 1rem;
   text-align: center;
@@ -120,6 +127,8 @@ body {
 .hero-section .intro {
   text-align: center;
   font-size: 1.2rem;
+  font-size: 1rem;
+  line-height: 1.5rem;
 }
 
 .hero-section .waitlist-form {
@@ -138,6 +147,7 @@ body {
 
 .feature-section .title {
   font-size: 2rem;
+  font-weight: 500;
   position: relative;
   padding-left: 0.5rem;
   padding-bottom: 0.5rem;
@@ -159,7 +169,7 @@ body {
 
 .feature-section .content img {
   aspect-ratio: 3/2 auto;
-  object-fit: contain;
+  /* object-fit: contain; */
 }
 
 .waitlist-card {
@@ -173,6 +183,10 @@ body {
   color: white;
   text-align: center;
   margin-top: 3rem;
+}
+
+.waitlist-card h2 {
+  margin-bottom: 0rem;
 }
 
 .waitlist-card form {
@@ -231,6 +245,33 @@ footer .links-row {
   gap: 2rem;
 }
 
+.waitlist-form-container {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  top: 0px;
+  left: 0px;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(10px);
+  justify-content: center;
+  align-items: center;
+}
+
+.waitlist-form-wrapper {
+  display: flex;
+  flex-flow: column nowrap;
+  gap: 2rem;
+  color: white;
+  align-items: center;
+}
+
+.waitlist-form-wrapper iframe {
+  width: 95vw;
+  height: 80vh;
+}
+
 /* laptop screens and above */
 @media screen and (min-width: 768px) {
   .top-bar {
@@ -253,6 +294,16 @@ footer .links-row {
     font-size: 4rem;
   }
 
+  .hero-section .subtitle {
+    font-size: 4rem;
+  }
+
+  .hero-section .intro {
+    font-size: 1.5rem;
+    line-height: 2.28281rem;
+    line-height: 2.28281rem;
+  }
+
   .hero-section .waitlist-form {
     flex-direction: row;
     margin-top: 2rem;
@@ -260,19 +311,19 @@ footer .links-row {
 
   .feature-section {
     padding: 2rem var(--big-screen-y-padding);
-  }
-
-  .feature-section .title::after {
-    width: 10%;
+    /* max-width: 1080px; */
   }
 
   .feature-section .content {
     display: flex;
     gap: 5rem;
+    text-align: justify;
+    align-items: center;
   }
 
   .feature-section .content img {
-    height: 200px;
+    height: 300px;
+    max-width: 500px;
     aspect-ratio: 3/2;
   }
 

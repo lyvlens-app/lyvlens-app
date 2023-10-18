@@ -8,6 +8,7 @@
   <meta name="description" content="Lyvlens revolutionizes help-seeking by offering AI+Human solutions to questions.">
   <meta name="keywords" content="lyvlens, tech, help, question" />
   <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
 </head>
 
 <body>
@@ -15,11 +16,11 @@
   <header class="top-bar">
     <img src="assets/logo.svg" alt="lyvlens logo" class="logo" />
     <nav>
-      <a href="https://x.com" target="_blank">
+      <a href="https://x.com/lyvlens?s=21" target="_blank">
         X (formerly Twitter)
         <img class="social-icon" src="assets/arrow.svg" alt="arrow icon">
       </a>
-      <a href="https://instagram.com" target="_blank">
+      <a href="https://instagram.com/lyvlens?igshid=NGVhN2U2NjQ0Yg==" target="_blank">
         Instagram
         <img class="social-icon" src="assets/arrow.svg" alt="arrow icon">
       </a>
@@ -28,7 +29,7 @@
         <img class="social-icon" src="assets/arrow.svg" alt="arrow icon">
       </a>
     </nav>
-    <button class="btn btn-secondary">JOIN WAITLIST</button>
+    <button class="btn btn-secondary waitlist-btn">JOIN WAITLIST</button>
   </header>
 
   <main>
@@ -38,15 +39,14 @@
       <p class="intro">Blend AI and Human Support: Join Lyvlens to connect with experts, share knowledge, and
         conquer tech challenges through the power of community and collaboration</p>
       <form class="waitlist-form">
-        <input type="email" required placeholder="Enter your email address" aria-label="waitlist email input" />
-        <button type="submit" class="btn btn-primary">Join waitlist</button>
+        <button type="submit" class="btn btn-primary waitlist-btn">Join waitlist</button>
       </form>
     </section>
 
     <section class="feature-section">
-      <h2 class="title">Seek Tech Help with Ease</h2>
       <div class="content">
         <div class="text">
+          <h2 class="title">Seek Tech Help with Ease</h2>
           <p>
             Lyvlens revolutionizes help-seeking by offering seamless access to tech experts.
           </p>
@@ -56,14 +56,14 @@
             the process.
           </p>
         </div>
-        <img src="assets/tech-help.png" alt="seek help picture">
+        <img src="assets/feature-1.svg" alt="seek help picture" class="animate__animated feature-1-img">
       </div>
     </section>
 
     <section class="feature-section">
-      <h2 class="title">Blend of AI and Human Support</h2>
       <div class="content">
         <div class="text">
+          <h2 class="title">Blend of AI and Human Support</h2>
           <p>
             Experience a unique support blend at our platform, merging AI and human expertise for real-time assistance.
             Connect with experts and leverage AI for swift solutions.
@@ -72,7 +72,7 @@
             Join our community to foster collaboration through knowledge exchange and instant assistance.
           </p>
         </div>
-        <img src="assets/ai-human.png" alt="seek help picture">
+        <img src="assets/feature-2.svg" alt="seek help picture" class="animate__animated feature-2-img">
       </div>
     </section>
   </main>
@@ -83,8 +83,7 @@
       Connect with experts, share knowledge, and conquer tech challenges together.
     </p>
     <form class="waitlist-form">
-      <input type="email" required placeholder="Enter your email address" aria-label="waitlist email input" />
-      <button type="submit" class="btn btn-primary">Join waitlist</button>
+      <button type="submit" class="btn btn-primary waitlist-btn">Join waitlist</button>
     </form>
   </div>
 
@@ -92,11 +91,11 @@
     <div class="row">
       <img src="assets/logo-white.svg" alt="lyvlens logo" class="footer-logo">
       <div class="socials-box">
-        <a href="https://x.com" target="_blank">
+        <a href="https://x.com/lyvlens?s=21" target="_blank">
           X (formerly Twitter)
           <img class="social-icon" src="assets/arrow.svg" alt="arrow icon">
         </a>
-        <a href="https://instagram.com" target="_blank">
+        <a href="https://instagram.com/lyvlens?igshid=NGVhN2U2NjQ0Yg==" target="_blank">
           Instagram
           <img class="social-icon" src="assets/arrow.svg" alt="arrow icon">
         </a>
@@ -115,6 +114,62 @@
       <p>2023 Lyvlens &copy; - Your 3D Tech Assistant</p>
     </div>
   </footer>
+
+  <div class="waitlist-form-container"></div>
+
+  <script>
+    function openWaitlistForm(ev) {
+      ev.preventDefault()
+      const formContainer = document.querySelector('.waitlist-form-container')
+      formContainer.innerHTML = `
+        <div class="waitlist-form-wrapper">
+          <iframe
+            src="https://docs.google.com/forms/d/e/1FAIpQLSd2-JHYK6GliO-NKyty3sVQCdckURv3HgJU8RCkWrAvHB2vbg/viewform?embedded=true"
+            width="100%" height="100%" frameborder="0" marginheight="0" marginwidth="0"
+          >
+            Loading...
+          </iframe>
+          <button class="btn btn-primary" style="width: 50%; margin-top: 2rem;" onclick="closeWaitlistForm()">Close</button>
+        </div>
+      `
+      formContainer.style.display = 'flex'
+    }
+
+    function closeWaitlistForm() {
+      const formContainer = document.querySelector('.waitlist-form-container')
+      formContainer.innerHTML = ''
+      formContainer.style.display = 'none'
+    }
+
+    const waitlistBtns = document.querySelectorAll('.waitlist-btn')
+    waitlistBtns.forEach(btn => btn.addEventListener('click', openWaitlistForm))
+
+    const feature1Img = document.querySelector('.feature-1-img');
+    const feature2Img = document.querySelector('.feature-2-img');
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          if (entry.target === feature1Img) {
+            feature1Img.style.visibility = 'visible';
+            feature1Img.classList.add('animate__fadeInUp');
+          } else if (entry.target === feature2Img) {
+            feature2Img.style.visibility = 'visible';
+            feature2Img.classList.add('animate__fadeInUp');
+          }
+        } else {
+          if (entry.target === feature1Img) {
+            feature1Img.style.visibility = 'hidden';
+            feature1Img.classList.remove('animate__fadeInUp');
+          } else if (entry.target === feature2Img) {
+            feature2Img.style.visibility = 'hidden';
+            feature2Img.classList.remove('animate__fadeInUp');
+          }
+        }
+      });
+    });
+    observer.observe(feature1Img);
+    observer.observe(feature2Img);
+  </script>
 </body>
 
 </html>
