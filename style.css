@@ -79,9 +79,13 @@ body {
   display: none;
   text-transform: uppercase;
   margin-right: 1rem;
-  font-family: "Oswald" sans-serif;
+  font-family: "Oswald";
   text-wrap: nowrap;
   gap: 1rem;
+}
+
+.top-bar button {
+  font-family: "Oswald";
 }
 
 .top-bar nav a {
@@ -136,10 +140,6 @@ body {
 .hero-section .waitlist-form input {
   color: white;
 }
-
-/* .hero-section .waitlist-form button {
-  border-radius: 8px;
-} */
 
 .feature-section {
   padding: 1rem 1rem;
@@ -245,6 +245,33 @@ footer .links-row {
   gap: 2rem;
 }
 
+.waitlist-form-container {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  top: 0px;
+  left: 0px;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(10px);
+  justify-content: center;
+  align-items: center;
+}
+
+.waitlist-form-wrapper {
+  display: flex;
+  flex-flow: column nowrap;
+  gap: 2rem;
+  color: white;
+  align-items: center;
+}
+
+.waitlist-form-wrapper iframe {
+  width: 95vw;
+  height: 80vh;
+}
+
 /* laptop screens and above */
 @media screen and (min-width: 768px) {
   .top-bar {
@@ -284,18 +311,17 @@ footer .links-row {
 
   .feature-section {
     padding: 2rem var(--big-screen-y-padding);
+    /* max-width: 1080px; */
   }
 
   .feature-section .content {
     display: flex;
     gap: 5rem;
     text-align: justify;
-    /* gap: 10rem; */
     align-items: center;
   }
 
   .feature-section .content img {
-    /* height: 200px; */
     height: 300px;
     max-width: 500px;
     aspect-ratio: 3/2;
